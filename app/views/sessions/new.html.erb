@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="container">
+    <div class="col-md-12 col-xs-12">
+      <ol class="breadcrumb">
+        <li><a href= <%= root_path %>>Home</a></li>
+        <li class="active">Login</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="container">
+    <div class="page-header col-md-offset-3 col-md-6">
+      <h1>Log In</h1>
+    </div>
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(:session, url: login_path) do |f| %>
+
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.text_field :email, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.submit "Log in", class: "btn btn-primary" %>
+      </div>
+      
+      <% end %>
+
+      <p>New user? <%= link_to "Sign up now!", sign_up_path %></p>
+    </div>
+  </div>
+</div>
