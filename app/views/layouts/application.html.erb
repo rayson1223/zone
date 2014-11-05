@@ -22,9 +22,9 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-      
+
         <li><%= link_to 'Home', root_path %></li>
         <li><%= link_to 'About', about_path %></li>
         <li><%= link_to 'Contact', contact_path %></li>
@@ -32,10 +32,11 @@
           <li><%= link_to 'Sign Up', sign_up_path %></li>
           <li><%= link_to 'Sign In', login_path %></li>
         <%- else %>
-          <li><%= link_to 'Logout', logout_path, method: :delete  %></li> 
+          <li><%= link_to "Settings", edit_user_path(session[:user_id]) %></li>
+          <li><%= link_to 'Logout', logout_path, method: :delete  %></li>
         <% end %>
       </ul>
-      
+
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
@@ -54,7 +55,7 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <p>Copyright &copy; 2014</p> 
+      <p>Copyright &copy; 2014</p>
     </div>
   </div>
 </div>

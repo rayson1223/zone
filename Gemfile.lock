@@ -41,6 +41,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    countries (0.9.3)
+      currencies (~> 0.4.2)
+    currencies (0.4.2)
     erubis (2.7.0)
     execjs (2.2.1)
     hike (1.2.3)
@@ -119,6 +122,7 @@ DEPENDENCIES
   bcrypt-ruby (~> 3.1.2)
   bootstrap-sass (~> 3.2.0)
   coffee-rails (~> 4.0.0)
+  countries
   jbuilder (~> 1.2)
   jquery-rails
   pg

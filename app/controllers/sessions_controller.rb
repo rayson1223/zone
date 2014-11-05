@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       # login
       session[:user_id] = @user.id
       flash[:success] = 'Successfully signed in!'
-      redirect_to users_path
+      redirect_to user_path(id: @user.id)
     else
       # incorrect password or username combination
       flash.now[:danger] = 'Invalid username or password'
