@@ -1,7 +1,12 @@
 class UsersController < ApplicationController
+  include SessionsHelper
 
   def index
-    @user = User.all
+    if logged_in?
+      @user = User.all
+    else
+      redirect_to login_path, danger: "You must be logged in to access this section"
+    end
   end
 
   def create
