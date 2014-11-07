@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
+      UserMailer.welcome_email(@user).deliver
       redirect_to user_path(id: @user.id), notice: "Thanks for Signing Up!"
     else
       flash.now[:danger] = @user.errors
