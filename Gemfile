@@ -47,6 +47,11 @@ group :development, :test do
   gem 'factory_girl_rails'
 end
 
+group :production, :staging do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'pg'
