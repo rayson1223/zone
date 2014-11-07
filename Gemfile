@@ -44,6 +44,12 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :development, :test do
+  gem 'rspec-rails', '~>3.0.0'
+  gem 'capybara'
+  gem 'factory_girl_rails'
+end
+
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'pg'
